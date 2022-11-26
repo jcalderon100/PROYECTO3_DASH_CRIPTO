@@ -1,14 +1,13 @@
 # PROYECTO 3 - Dashboard Consumo de API, criptomonedas 
 
-El Proyecto tiene como finalidad la creacion de un sitio web para mostrar los distintos 
-productos y/o servicios que el desarrollador ofrece a sus posibles clientes
+El Proyecto tiene como finalidad la creacion de un Dashboard que muestre a travez de graficas (Chart js) el consumo de informacion por medio de una API, en este caso informacion en tiempo real de diversas criptomonedas con mayor relevancia.
 
 
 
-## Authors
+## Colaboradores
 
 - [@Juan Pablo](https://github.com/AsmodeoSempai)
-- [@Anderson Lopez](https://github.com/)
+- [@Anderson Lopez](https://github.com/Klopezg95)
 - [@Julio Calderon](https://github.com/jcalderon100)
 
 
