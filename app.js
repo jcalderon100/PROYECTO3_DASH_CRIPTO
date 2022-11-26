@@ -1,5 +1,7 @@
+
+
 import { paintResult } from "./funciones.js";
-// Evento que llame funcion 
+// Evento que llama a funcion 
 
 const render = document.querySelector('#render');
 
@@ -11,36 +13,50 @@ async function getCripto(){
     paintResult (resultado.data, render)
 }
 
+
+
 var ctx = document.getElementById('myChart').getContext('2d');
-      var myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            datasets: [{ 
-                data: [86,114,106,106,107,111,133],
-                label: "Total",
-                borderColor: "#3e95cd",
-                backgroundColor: "#7bb6dd",
-                fill: false,
-              }, { 
-                data: [70,90,44,60,83,90,100],
-                label: "Accepted",
-                borderColor: "#3cba9f",
-                backgroundColor: "#71d1bd",
-                fill: false,
-              }, { 
-                data: [10,21,60,44,17,21,17],
-                label: "Pending",
-                borderColor: "#ffa500",
-                backgroundColor:"#ffc04d",
-                fill: false,
-              }, { 
-                data: [6,3,2,2,7,0,16],
-                label: "Rejected",
-                borderColor: "#c45850",
-                backgroundColor:"#d78f89",
-                fill: false,
-              }
-            ]
-          },
+
+fetch('https://api.coincap.io/v2/assets')
+    .then(respuesta => respuesta.json())
+    .then(resultado => {
+
+        const nombre = resultado.data.map((dato) => dato.name)
+        const precio = resultado.data.map((dato) => Number(dato.priceUsd))
+        
+
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: nombre,
+                datasets: [{
+                    label: 'valor',
+                    data: precio,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
         });
+    });
