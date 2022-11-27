@@ -3,7 +3,7 @@
 import { paintResult } from "./funciones.js";
 // Evento que llama a funcion 
 
-const render = document.querySelector('#render');
+const table = document.querySelector('#render');
 
 document.addEventListener('DOMContentLoaded', getCripto);
 
@@ -15,7 +15,7 @@ async function getCripto(){
 
 
 
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('Grafica').getContext('2d');
 
 fetch('https://api.coincap.io/v2/assets')
     .then(respuesta => respuesta.json())
@@ -30,25 +30,20 @@ fetch('https://api.coincap.io/v2/assets')
             data: {
                 labels: nombre,
                 datasets: [{
-                    label: 'valor',
+                    label: 'Precio',
                     data: precio,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        '#008000',
+                        '#0000FF',
+                        '#00FFFF',
+                        '#FF00FF',
+                        '#FFFF00',
+                        '#800000'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        '#FFFFFF',
                     ],
-                    borderWidth: 1
+                    borderWidth: 0
                 }]
             },
             options: {
