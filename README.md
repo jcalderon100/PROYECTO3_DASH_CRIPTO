@@ -19,7 +19,7 @@ https://jcalderon100.github.io/PROYECTO3_DASH_CRIPTO/
 
 
 ## Portada
-![App Screenshot]()
+![App Screenshot](https://github.com/jcalderon100/PROYECTO3_DASH_CRIPTO/blob/main/img/Screenshot.png)
 
 
 ## 🛠 Skills
