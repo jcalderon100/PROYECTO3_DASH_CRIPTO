@@ -12,6 +12,15 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.card {
+    background-color: rgb(194, 191, 191);
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
 #render{
     display: flex;
     flex-wrap: wrap;
@@ -32,10 +41,14 @@ header a {
 	background: #00171f;
 }
 
-.logo-menu h2 {
-	font-weight: 300;
-	font-size: 30px;
+.logo {
+	width: 50px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	
 }
+
 
 .logo-menu .menu a {
 	display: inline-block;
@@ -61,45 +74,5 @@ header a {
 }
 
 /* MAIN */
-.main {
-	margin: 40px 0;
-}
 
-.main .thumb {
-	margin-bottom: 20px;
-}
 
-.main .thumb img {
-	width: 100%;
-	vertical-align: top;
-}
-
-/* FOOTER */
-footer {
-	background: #00171f;
-	color:#fff;
-	padding: 40px 0;
-}
-
-footer .nav a {
-	width: 100%;
-	display: block;
-	padding: 20px;
-	color:#fff;
-	text-decoration: none;
-	border-bottom: 1px solid rgba(255,255,255,.2);
-}
-
-footer .nav a:hover {
-	text-decoration: underline;
-}
-
-footer .logo {
-	background: #003459;
-	color:#fff;
-	padding: 25px;
-	font-weight: 300;
-	border-radius: 0 30px 0 30px;
-	font-size: 30px;
-	text-align: center;
-}
